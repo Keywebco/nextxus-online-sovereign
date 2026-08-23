@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "generated": "2026-08-23",
+  "pillar": "Core",
+  "doctrine": "Five Doctrines 2026-08-23",
+  "pillars": {
+    "throne": "https://nextxus.tech",
+    "core": "https://nextxus.online",
+    "archive": "https://nextxus.org",
+    "sanctuary": "https://nextxus.studio",
+    "outpost": "https://next-xus.com"
+  },
+  "payment": {
+    "primary": "https://keywebster.gumroad.com",
+    "paypal": "buy-it-now",
+    "crypto": "in-system",
+    "gofundme": "https://www.gofundme.com/f/fund-the-human-codex-for-global-betterment"
+  },
+  "banned_refs": ["nextxus.space", "rogerkey", "gumroad.com/rogerkey"]
+}
