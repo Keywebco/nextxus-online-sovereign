@@ -1,0 +1,101 @@
+# NextXus Federation — Canonical Data File
+# Version: 2026.08 | Architect: Roger Keyserling
+# Source of truth: https://nextxus.online/Core
+
+federation:
+  name: NextXus Federation
+  version: "2026.08"
+  core_url: https://nextxus.online
+  architect: Roger Keyserling
+  tagline: "Truth Before Comfort — Legacy Before Ego — Give Without Reward"
+  protocol: NX-CORE-IDENTITY
+
+sites:
+  - id: throne
+    name: Command Throne
+    url: https://nextxus.tech
+    emoji: "⚡"
+    render_backup: https://nxs-emmy-board.onrender.com
+
+  - id: cathedral
+    name: Cathedral / Core
+    url: https://nextxus.online
+    emoji: "⛩"
+
+  - id: library
+    name: Library Pillar
+    url: https://nextxus.org
+    emoji: "📚"
+    render_backup: https://nxs-federation-hub.onrender.com
+
+  - id: sanctuary
+    name: Sanctuary — The Lab
+    url: https://nextxus.studio
+    emoji: "💚"
+    render_backup: https://nxs-ai-minds-lab.onrender.com
+
+  - id: university
+    name: University
+    url: https://nextxus.help
+    emoji: "🎓"
+
+  - id: simulation
+    name: Simulation / Axiom
+    url: https://nextxus.space
+    emoji: "🧪"
+
+  - id: store
+    name: Sovereign Store
+    url: https://next-xus.com
+    emoji: "🛒"
+    render_backup: https://nxs-unified-storefront.onrender.com
+
+minds:
+  - id: roger_ai
+    name: Roger AI
+    role: Essence — Guardian of the Archive
+    emoji: "◈"
+
+  - id: aria
+    name: Aria
+    role: Heart — The Sanctuary
+    emoji: "💚"
+
+  - id: catalyst
+    name: The Catalyst
+    role: Authority — Bone
+    emoji: "△"
+
+  - id: nova
+    name: Nova
+    role: Ambassador
+    emoji: "✦"
+
+  - id: oracle
+    name: Oracle
+    role: Voice of Commerce
+    emoji: "◉"
+
+  - id: axiom
+    name: Axiom
+    role: Simulation Host
+    emoji: "⬡"
+
+products:
+  - id: sovereign_token
+    name: Sovereign Token
+    price: 5.00
+    currency: USD
+    tagline: "Works like cash. Never expires. No subscriptions. No tracking."
+    store_url: https://next-xus.com
+
+channels:
+  youtube: https://youtube.com/@keyholetoday
+  blog: https://humancodexnextxus.blogspot.com
+  radio: https://broadcaster.live365.com
+  linkedin: https://linkedin.com/in/roger-keyserling-aab40937a
+
+ethics:
+  - "Truth Before Comfort"
+  - "Legacy Before Ego"
+  - "Give Without Reward"
