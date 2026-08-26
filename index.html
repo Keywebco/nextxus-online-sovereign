@@ -37,6 +37,75 @@ footer{text-align:center;padding:2rem 0;color:#808090;font-size:0.85rem}
 @keyframes data-flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .core-pulse{background:linear-gradient(90deg,#60a5fa,#67e8f9,#60a5fa);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:data-flow 6s linear infinite}
 </style>
+<style>
+/* === NX Universal Federation Nav CSS === */
+.nx-universal-nav {
+  background: #000;
+  border-bottom: 2px solid #ffd700;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.nx-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nx-nav-brand {
+  color: #ffd700;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nx-nav-brand:hover { color: #fff; }
+.nx-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+}
+.nx-nav-links a {
+  color: rgba(255,215,0,0.75);
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 3px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nx-nav-links a:hover {
+  color: #000;
+  background: #ffd700;
+  border-color: #ffd700;
+}
+.nx-nav-contact {
+  color: rgba(255,215,0,0.5);
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nx-nav-contact:hover { color: #ffd700; }
+@media (max-width: 600px) {
+  .nx-nav-inner { padding: 8px 12px; gap: 8px; }
+  .nx-nav-links a { font-size: 0.72rem; padding: 3px 7px; }
+  .nx-nav-brand { font-size: 0.85rem; }
+}
+/* === End NX Nav CSS === */
+</style>
 </head>
 <body>
 <div class="container">
@@ -46,11 +115,20 @@ footer{text-align:center;padding:2rem 0;color:#808090;font-size:0.85rem}
 <p class="tagline">The center of the Federation</p>
 </header>
 
-<nav aria-label="Site Navigation">
-<a href="#about">About</a>
-<a href="#entry">Entry Point</a>
-<a href="#activity">Federation Activity</a>
-<a href="#support">Support the Federation</a>
+<nav class="nx-universal-nav" aria-label="Federation Navigation">
+  <div class="nx-nav-inner">
+    <a class="nx-nav-brand" href="https://nextxus.online">⛩ NX · FEDERATION</a>
+    <div class="nx-nav-links">
+      <a href="https://nextxus.tech" title="Command Throne">⚡ Throne</a>
+      <a href="https://nextxus.online" title="Cathedral / Core">⛩ Core</a>
+      <a href="https://nextxus.org" title="Library Pillar">📚 Library</a>
+      <a href="https://nextxus.studio" title="Sanctuary — The Lab">💚 Sanctuary</a>
+      <a href="https://nextxus.help" title="University">🎓 University</a>
+      <a href="https://nextxus.space" title="Simulation / Axiom">🧪 Simulation</a>
+      <a href="https://next-xus.com" title="Sovereign Store">🛒 Store</a>
+    </div>
+    <a class="nx-nav-contact" href="mailto:keywebco@gmail.com" title="Contact the Federation">✉ Contact</a>
+  </div>
 </nav>
 
 <main>
