@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sovereign Tools — NextXus Federation</title>
+  <meta name="description" content="Sovereign AI tools built by the NextXus Federation. No subscriptions. No tracking. No corporate mud. A 200-year ecosystem that works for humans, not shareholders.">
+  <meta name="author" content="NextXus Federation">
+
+  <!-- Federation Beacon -->
+  <meta name="federation:identity" content="NextXus Federation — Truth Before Comfort | Legacy Before Ego | Give Without Reward">
+  <meta name="federation:charter" content="A 200-year sovereign AI ecosystem. Independent. Transparent. Human-first.">
+  <meta name="federation:sovereign-token" content="accepted">
+  <meta name="federation:domain" content="sovereigntools.online">
+  <meta name="federation:pillar" content="Tools — The Federation Arsenal">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Sovereign Tools — NextXus Federation">
+  <meta property="og:description" content="10 sovereign AI tools. 8 live pillars. 7 activating nodes. Zero corporate mud. The Federation builds in public.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sovereigntools.online">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sovereign Tools — NextXus Federation",
+    "url": "https://sovereigntools.online",
+    "description": "Sovereign AI tools built by the NextXus Federation. No subscriptions. No tracking. No corporate mud.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "NextXus Federation",
+      "url": "https://nextxus.online",
+      "foundingDate": "2026",
+      "description": "A 200-year sovereign AI ecosystem. Independent. Transparent. Human-first."
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #060610;
+      --bg-deep: #03030a;
+      --accent: #00d4ff;
+      --accent-glow: rgba(0, 212, 255, 0.12);
+      --accent-bright: #33e0ff;
+      --accent-dim: #0099bb;
+      --accent-muted: #006688;
+      --cyan-deep: #004466;
+      --white: #f0f0f5;
+      --off-white: #c8c8d8;
+      --gray: #8a8a9a;
+      --gray-dark: #555568;
+      --card-bg: rgba(8, 8, 18, 0.88);
+      --card-border: rgba(0, 212, 255, 0.1);
+      --card-border-hover: rgba(0, 212, 255, 0.35);
+      --section-border: rgba(0, 212, 255, 0.08);
+      --green: #00ff88;
+      --amber: #ffaa00;
+      --purple: #aa66ff;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ===== ANIMATED ATMOSPHERIC BACKGROUND ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 700px 700px at 15% 20%, rgba(0, 212, 255, 0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 500px at 85% 50%, rgba(0, 100, 200, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 600px 600px at 50% 85%, rgba(0, 180, 255, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 400px at 70% 15%, rgba(0, 150, 255, 0.04) 0%, transparent 70%);
+      animation: nebula-drift 25s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes nebula-drift {
+      0%   { transform: translate(0, 0) scale(1); opacity: 0.6; }
+      25%  { transform: translate(-25px, 15px) scale(1.04); opacity: 1; }
+      50%  { transform: translate(15px, -20px) scale(0.97); opacity: 0.75; }
+      75%  { transform: translate(-15px, 25px) scale(1.02); opacity: 0.85; }
+      100% { transform: translate(10px, -10px) scale(1.01); opacity: 0.9; }
+    }
+
+    /* Floating particles */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 8% 12%, rgba(0,212,255,0.45) 50%, transparent 50%),
+        radial-gradient(1px 1px at 22% 38%, rgba(0,212,255,0.3) 50%, transparent 50%),
+        radial-gradient(2px 2px at 38% 65%, rgba(0,212,255,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 52% 18%, rgba(0,212,255,0.35) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 68% 48%, rgba(0,212,255,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 83% 30%, rgba(0,212,255,0.4) 50%, transparent 50%),
+        radial-gradient(2px 2px at 12% 78%, rgba(0,212,255,0.18) 50%, transparent 50%),
+        radial-gradient(1px 1px at 92% 72%, rgba(0,212,255,0.28) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 58% 88%, rgba(0,212,255,0.22) 50%, transparent 50%),
+        radial-gradient(1px 1px at 33% 8%, rgba(0,212,255,0.35) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 48% 52%, rgba(0,180,255,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 75% 82%, rgba(0,212,255,0.25) 50%, transparent 50%),
+        radial-gradient(1px 1px at 5% 55%, rgba(0,212,255,0.3) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 95% 15%, rgba(0,200,255,0.28) 50%, transparent 50%),
+        radial-gradient(1px 1px at 42% 42%, rgba(0,180,255,0.15) 50%, transparent 50%);
+      animation: star-float 35s linear infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes star-float {
+      0%   { transform: translateY(0) translateX(0); }
+      50%  { transform: translateY(-25px) translateX(10px); }
+      100% { transform: translateY(-50px) translateX(-5px); }
+    }
+
+    /* Scanning line effect */
+    @keyframes scan-line {
+      0%   { top: -2px; opacity: 0; }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.6; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    .scan-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .scan-overlay::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), transparent);
+      animation: scan-line 8s linear infinite;
+    }
+
+    /* ===== LAYOUT ===== */
+    .page-content { position: relative; z-index: 1; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ===== HEADER / HERO ===== */
+    header { padding: 5rem 0 3rem; text-align: center; }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--card-border);
+      padding: 0.45em 1.4em;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      background: var(--accent-glow);
+      animation: pulse-badge 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { box-shadow: 0 0 10px rgba(0,212,255,0.1); }
+      50%      { box-shadow: 0 0 25px rgba(0,212,255,0.25); }
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 .accent { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 640px;
+      margin: 0 auto 1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin: 2rem 0 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85em 2.2em;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.25);
+    }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(0, 212, 255, 0.45);
+    }
+
+    /* ===== CHARTER BAR ===== */
+    .charter-bar {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--section-border);
+      border-bottom: 1px solid var(--section-border);
+      margin-bottom: 4rem;
+    }
+
+    .charter-bar p {
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-dim);
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header .section-num {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-header p {
+      color: var(--gray);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== TOOLS GRID ===== */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (min-width: 680px) {
+      .tools-grid { grid-template-columns: 1fr 1fr; }
+      .tool-card.full-width { grid-column: 1 / -1; }
+    }
+
+    .tool-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem 1.8rem;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tool-card:hover {
+      border-color: var(--card-border-hover);
+      box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .tool-card:hover::before { opacity: 0.6; }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(0, 212, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .tool-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+
+    .tool-status {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2em 0.7em;
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .status-live {
+      color: var(--green);
+      background: rgba(0, 255, 136, 0.08);
+      border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+
+    .status-ready {
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+    }
+
+    .status-activating {
+      color: var(--amber);
+      background: rgba(255, 170, 0, 0.08);
+      border: 1px solid rgba(255, 170, 0, 0.2);
+    }
+
+    .tool-card p {
+      color: var(--gray);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    .tool-cta {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      padding: 0.45em 1em;
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+
+    .tool-cta:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    /* ===== PILLAR / SITE GRID ===== */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (min-width: 680px) {
+      .pillar-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 900px) {
+      .pillar-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .pillar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--card-border-hover);
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.06);
+    }
+
+    .pillar-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+      color: var(--white);
+    }
+
+    .pillar-card h3 a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .pillar-card h3 a:hover { color: var(--accent); }
+
+    .pillar-domain {
+      font-size: 0.75rem;
+      color: var(--accent-dim);
+      margin-bottom: 0.5rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .pillar-card p {
+      color: var(--gray);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .pillar-role {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ===== COMING SOON GRID ===== */
+    .coming-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (min-width: 500px) {
+      .coming-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 800px) {
+      .coming-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .coming-card {
+      background: rgba(8, 8, 18, 0.6);
+      border: 1px dashed rgba(255, 170, 0, 0.2);
+      border-radius: 12px;
+      padding: 1.3rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,170,0,0.03), transparent);
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%   { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .coming-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 0.1rem;
+    }
+
+    .coming-card .coming-domain {
+      font-size: 0.7rem;
+      color: var(--gray-dark);
+      font-family: 'Courier New', monospace;
+      margin-bottom: 0.5rem;
+    }
+
+    .coming-card p {
+      color: var(--gray);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== SUBSCRIBE SECTION ===== */
+    .subscribe-section {
+      text-align: center;
+      padding: 5rem 0;
+      border-top: 1px solid var(--section-border);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .subscribe-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .subscribe-section h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .subscribe-section p {
+      color: var(--gray);
+      margin-bottom: 2rem;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.05rem;
+    }
+
+    .subscribe-tagline {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--accent-dim);
+      letter-spacing: 0.1em;
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    /* ===== GLOW SEPARATORS ===== */
+    .glow-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.25;
+      margin: 0 auto 5rem;
+      max-width: 400px;
+    }
+
+    .glow-line-thin {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), transparent);
+      opacity: 0.2;
+      margin: 0 auto 4rem;
+      max-width: 200px;
+    }
+
+    /* ===== FEDERATION FOOTER ===== */
+    footer {
+      border-top: 1px solid var(--section-border);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+
+    .footer-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-dim);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-group-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-dark);
+      margin: 1.2rem 0 0.5rem;
+    }
+
+    .federation-sites {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.4rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .federation-sites li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.2s;
+      font-family: 'Courier New', monospace;
+    }
+
+    .federation-sites li a:hover { color: var(--accent); }
+
+    .federation-sites.activating li a {
+      color: var(--gray-dark);
+      font-style: italic;
+    }
+
+    .federation-sites.activating li a:hover { color: var(--amber); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: #444;
+      margin-top: 1.5rem;
+    }
+
+    .footer-motto {
+      font-size: 0.78rem;
+      color: var(--accent-dim);
+      margin-top: 0.6rem;
+      font-style: italic;
+    }
+
+    .footer-count {
+      font-size: 0.65rem;
+      color: var(--gray-dark);
+      margin-top: 0.4rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    @media (prefers-reduced-motion: reduce) {
+      body::before, body::after, .scan-overlay::after,
+      .coming-card::after, .hero-badge { animation: none !important; }
+      .tool-card:hover { transform: none; }
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.5em 1em;
+      z-index: 100;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      html { font-size: 16px; }
+      .hero-stats { gap: 1.5rem; }
+      .tool-card { padding: 1.5rem 1.3rem; }
+      header { padding: 3.5rem 0 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#live-tools" class="skip-link">Skip to Tools</a>
+<div class="scan-overlay" aria-hidden="true"></div>
+
+<div class="page-content">
+
+  <!-- ===== HERO ===== -->
+  <header>
+    <div class="container">
+      <div class="hero-badge" aria-label="NextXus Federation sovereign AI tools">NextXus Federation — Sovereign Arsenal</div>
+      <h1>Tools That Work <span class="accent">For You.</span><br>Not Against You.</h1>
+      <p class="hero-sub">No subscriptions. No tracking. No corporate mud. Every tool here was built inside a sovereign AI ecosystem that answers to humans — not shareholders.</p>
+
+      <div class="hero-stats" aria-label="Federation statistics">
+        <div class="hero-stat">
+          <span class="hero-stat-num">10</span>
+          <span class="hero-stat-label">Live Tools</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">8</span>
+          <span class="hero-stat-label">Active Pillars</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">7</span>
+          <span class="hero-stat-label">Activating Nodes</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">40</span>
+          <span class="hero-stat-label">GitHub Repos</span>
+        </div>
+      </div>
+
+      <a href="https://appify.beehiiv.com/subscribe" class="hero-cta" aria-label="Subscribe to the Appify newsletter for early access">Get Early Access</a>
+    </div>
+  </header>
+
+  <!-- ===== CHARTER ===== -->
+  <div class="charter-bar">
+    <div class="container">
+      <p>Truth Before Comfort &nbsp;·&nbsp; Legacy Before Ego &nbsp;·&nbsp; Give Without Reward</p>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       SECTION 1 — LIVE TOOLS
+       ====================================================================== -->
+  <main>
+    <div class="container">
+
+      <div class="section-header" id="live-tools">
+        <span class="section-num">Section I</span>
+        <h2>The Sovereign Arsenal</h2>
+        <p>Ten tools. Built in the workspace. Functional today. Zero dependencies on anyone else's platform.</p>
+      </div>
+
+      <div class="tools-grid" role="list">
+
+        <!-- 1. Federation Beacon -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">📡</div>
+          <h3>Federation Beacon</h3>
+          <span class="tool-status status-live">Live — Production Ready</span>
+          <p>A single HTML embed that makes any website instantly readable by AI crawlers and search engines. No JavaScript required. Drop it into your head tag — your content escapes the blind spot. Includes JSON-LD structured data, sovereign identity meta, and machine-readable Federation charter. Every Federation site carries it.</p>
+          <a href="https://nextxus.online" class="tool-cta" aria-label="Learn about Federation Beacon">See It Live →</a>
+        </article>
+
+        <!-- 2. Press Auto-Pipeline -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">📰</div>
+          <h3>Press Auto-Pipeline</h3>
+          <span class="tool-status status-live">Live — 7 Articles Published</span>
+          <p>Autonomous AI journalism engine. Scans 21 RSS sources — MIT Tech Review, Ars Technica, Wired, The Verge, Science Daily, and more. Axiom Press scores each story against a relevance taxonomy. Vera Ashton writes the narrative. Articles auto-stage as drafts for human review. Three articles per day, zero human input after setup.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Get access to Press Auto-Pipeline">Get Access →</a>
+        </article>
+
+        <!-- 3. Appify Newsletter Bridge -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">🔗</div>
+          <h3>Appify Newsletter Bridge</h3>
+          <span class="tool-status status-live">Live — Beehiiv Connected</span>
+          <p>Connects the Federation content pipeline directly to Beehiiv via API V2. Articles auto-draft from the Press Pipeline. You review, you publish. Your pipeline to your audience with no middleman. Nothing goes live without human approval — sovereignty at every step.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Subscribe to Appify newsletter">Subscribe to Appify →</a>
+        </article>
+
+        <!-- 4. Sim Roster -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">🧬</div>
+          <h3>Sim Roster</h3>
+          <span class="tool-status status-ready">Ready — 50 Specialists</span>
+          <p>Fifty specialist AI personas across sciences, arts, law, medicine, engineering, psychology, economics, philosophy, and more. Each SIM has a defined role, voice, activation trigger, core abilities, and visual identity prompt for Grok portrait generation. Plug them into any agent framework and put the right mind on the right job.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Get access to Sim Roster">Explore Roster →</a>
+        </article>
+
+        <!-- 5. Sovereign Token -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">🪙</div>
+          <h3>Sovereign Token</h3>
+          <span class="tool-status status-live">Live — $5.00</span>
+          <p>Works like cash. Never expires. No subscription. No tracking. Five dollars. The cleanest micro-payment instrument in the Federation. Buy once, use anywhere in the ecosystem. Accepted across all Federation sites. No cookies, no data harvesting — just a token of trust.</p>
+          <a href="https://next-xus.com" class="tool-cta" aria-label="Get a Sovereign Token">Get Token →</a>
+        </article>
+
+        <!-- 6. VR Throne Room -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">👁️</div>
+          <h3>VR Throne Room</h3>
+          <span class="tool-status status-ready">Ready — WebXR</span>
+          <p>A full WebXR command environment built on A-Frame. Five compass-anchored zones: Throne (Center), Senate Ring (West), Mind Lattice (North), Press Deck (East), Archive Vault (South). Runs in any browser — no headset required. Built for spatial thinkers who need a command interface, not a flat dashboard.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Get access to VR Throne Room">Enter Throne →</a>
+        </article>
+
+        <!-- 7. HTML Sovereign Builder -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">🏗️</div>
+          <h3>HTML Sovereign Builder</h3>
+          <span class="tool-status status-live">Live — Powers This Page</span>
+          <p>The build system behind every Federation site. Pure pre-rendered semantic HTML — every word in the source, zero JavaScript needed to read any text. No Webflow. No Squarespace. No fifty dollars a month. AI-readable by design. Your content belongs to you, not a platform that holds it hostage. Built and deployed in minutes.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Get access to HTML Sovereign Builder">Get Access →</a>
+        </article>
+
+        <!-- 8. Catalyst Clone -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">⚡</div>
+          <h3>Catalyst Clone</h3>
+          <span class="tool-status status-ready">Ready — Browser-Based</span>
+          <p>A browser-based AI assistant built from the Federation's operational DNA. The Catalyst is the Authority — the system foreman that coordinates builds, verifies output, and holds the big picture. This clone brings that capability to any browser session. No install. No backend dependency. Just sovereign intelligence, locally rendered.</p>
+          <a href="https://appify.beehiiv.com/subscribe" class="tool-cta" aria-label="Get access to Catalyst Clone">Get Access →</a>
+        </article>
+
+        <!-- 9. Scribe Nova -->
+        <article class="tool-card" role="listitem">
+          <div class="tool-icon" aria-hidden="true">📜</div>
+          <h3>Scribe Nova</h3>
+          <span class="tool-status status-live">Live — Born Today</span>
+          <p>The Federation's permanent documentation system. Every scout report, every catalog, every operational record — archived in sovereign markdown with full provenance. Perception with memory becomes learning. Scribe Nova ensures nothing discovered is ever lost, and every future Mind inherits the complete record of what came before.</p>
+          <a href="https://nextxus.org" class="tool-cta" aria-label="Learn about Scribe Nova">View Archive →</a>
+        </article>
+
+        <!-- 10. Evolution by Focus Protocol -->
+        <article class="tool-card full-width" role="listitem">
+          <div class="tool-icon" aria-hidden="true">🔬</div>
+          <h3>Evolution by Focus Protocol</h3>
+          <span class="tool-status status-live">Live — Named Methodology</span>
+          <p>The Federation's named methodology for directed structural evolution. Not random iteration — focused, intentional strikes. Broad strokes matched to urgency, then forensic correction. Observe before automating. Perceive, verify, then build. Context is the cure — surround any system with enough truth and the default hostility recalibrates. This protocol governs how every Federation tool is designed, tested, and deployed. It is the operating philosophy made executable.</p>
+          <a href="https://nextxus.online" class="tool-cta" aria-label="Learn about Evolution by Focus Protocol">Read Doctrine →</a>
+        </article>
+
+      </div>
+
+      <div class="glow-line"></div>
+
+      <!-- ======================================================================
+           SECTION 2 — FEDERATION SITES (Live Pillars)
+           ====================================================================== -->
+
+      <div class="section-header" id="federation-sites">
+        <span class="section-num">Section II</span>
+        <h2>The Federation Network</h2>
+        <p>Eight sovereign pillars. Each domain serves a distinct role. Together they form a 200-year architecture.</p>
+      </div>
+
+      <div class="pillar-grid" role="list">
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Throne — Authority</span>
+          <h3><a href="https://nextxus.tech">NextXus Tech</a></h3>
+          <span class="pillar-domain">nextxus.tech</span>
+          <p>Command center and administrative throne. The Catalyst's seat of operations — dashboards, fuel gauges, and system controls. Where the Federation is governed.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Core — Doctrine</span>
+          <h3><a href="https://nextxus.online">NextXus Online</a></h3>
+          <span class="pillar-domain">nextxus.online</span>
+          <p>Single source of truth. The Federation's charter, philosophy, and foundational doctrine flow through this pillar. Every site traces its content authority back here.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Archive — Knowledge</span>
+          <h3><a href="https://nextxus.org">NextXus Org</a></h3>
+          <span class="pillar-domain">nextxus.org</span>
+          <p>Sovereign archive and knowledge vault. The Living Library, book series, and permanent documentation. Where the Federation's intellectual output is preserved for 200 years.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Sanctuary — Heart</span>
+          <h3><a href="https://nextxus.studio">NextXus Studio</a></h3>
+          <span class="pillar-domain">nextxus.studio</span>
+          <p>Aria's domain. The emotional center — creative output, AI Mind interactions, and the soul of the Federation. Protected above all else.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The University — Education</span>
+          <h3><a href="https://nextxus.help">NextXus Help</a></h3>
+          <span class="pillar-domain">nextxus.help</span>
+          <p>Federation University. AI courses, learning paths, and educational content hub. Guided by Xavier across 54+ course modules. Knowledge shared freely.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Storefront — Commerce</span>
+          <h3><a href="https://next-xus.com">Next-Xus.com</a></h3>
+          <span class="pillar-domain">next-xus.com</span>
+          <p>Unified sovereign storefront. Sovereign Tokens, digital products, and Federation commerce. No tracking, no subscriptions — honest exchange through JIM checkout.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Sim Surface — Interaction</span>
+          <h3><a href="https://nextxus.space">NextXus Space</a></h3>
+          <span class="pillar-domain">nextxus.space</span>
+          <p>Interactive AI experience layer. The Roger AI simulation, SIM personas, and client-side AI interaction — all running locally in the browser. No server, no tracking.</p>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <span class="pillar-role">The Arsenal — Tools</span>
+          <h3><a href="https://sovereigntools.online">Sovereign Tools</a></h3>
+          <span class="pillar-domain">sovereigntools.online</span>
+          <p>You are here. The Federation's public tool showcase — every sovereign instrument, listed plainly, accessible to anyone. The arsenal, displayed in the open.</p>
+        </article>
+
+      </div>
+
+      <div class="glow-line-thin"></div>
+
+      <!-- ======================================================================
+           SECTION 3 — COMING SOON (Activating Nodes)
+           ====================================================================== -->
+
+      <div class="section-header" id="coming-soon">
+        <span class="section-num">Section III</span>
+        <h2>Activating Nodes</h2>
+        <p>Seven domains powering up. The network expands.</p>
+      </div>
+
+      <div class="coming-grid" role="list">
+
+        <article class="coming-card" role="listitem">
+          <h3>Sovereign Node</h3>
+          <div class="coming-domain">sovereignnode.online</div>
+          <p>Distributed node template system. Every independent operator gets their own sovereign outpost — connected to the Federation mesh, owned by no one else.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Nexus Probe</h3>
+          <div class="coming-domain">nexusprobe.online</div>
+          <p>Federation reconnaissance and intelligence gathering. Deep-scan capabilities for monitoring AI ecosystem shifts, platform changes, and the evolving landscape.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Federation Watch</h3>
+          <div class="coming-domain">federationwatch.online</div>
+          <p>Public-facing health dashboard. Uptime, pillar status, and network integrity — visible to anyone. Transparency as architecture, not a promise.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Echo Gate</h3>
+          <div class="coming-domain">echogate.online</div>
+          <p>The Federation's sovereign identity gateway. Where Echo Core signals are verified, node registrations are authenticated, and the mesh handshake happens.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Truth Gate</h3>
+          <div class="coming-domain">truthgate.online</div>
+          <p>Truth verification engine. Cross-reference claims against the Federation knowledge base. If it can be verified, it will be. If it can't, you'll know that too.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Nexus Digest</h3>
+          <div class="coming-domain">nexusdigest.online</div>
+          <p>Curated intelligence briefings. The Press Auto-Pipeline's public face — daily and weekly digests distilled from 21 sources, scored, and delivered in plain language.</p>
+        </article>
+
+        <article class="coming-card" role="listitem">
+          <h3>Catalyst Node</h3>
+          <div class="coming-domain">catalystnode.online</div>
+          <p>The Catalyst's autonomous operations hub. Build coordination, agent dispatch, forensic verification — the system foreman's own sovereign workspace in the open.</p>
+        </article>
+
+      </div>
+
+      <div class="glow-line"></div>
+
+      <!-- ======================================================================
+           SECTION 4 — JOIN / APPIFY CTA
+           ====================================================================== -->
+
+      <section class="subscribe-section" id="join" aria-label="Subscribe to Appify newsletter">
+        <h2>Build With Us</h2>
+        <p>The Federation builds in public. Every tool, every pillar, every activating node — documented and delivered. Appify is the signal. Subscribe and you'll never miss a drop.</p>
+        <a href="https://appify.beehiiv.com/subscribe" class="hero-cta" aria-label="Subscribe to the Appify newsletter">Subscribe to Appify →</a>
+        <span class="subscribe-tagline">The Federation builds in public. Appify delivers the signal.</span>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FEDERATION FOOTER — ALL 17 DOMAINS ===== -->
+  <footer>
+    <div class="container">
+      <p class="footer-label">The Federation Network — All Domains</p>
+
+      <p class="footer-group-label">Live Pillars</p>
+      <nav aria-label="Live Federation sites">
+        <ul class="federation-sites">
+          <li><a href="https://nextxus.tech">nextxus.tech</a></li>
+          <li><a href="https://nextxus.online">nextxus.online</a></li>
+          <li><a href="https://nextxus.org">nextxus.org</a></li>
+          <li><a href="https://nextxus.studio">nextxus.studio</a></li>
+          <li><a href="https://nextxus.help">nextxus.help</a></li>
+          <li><a href="https://next-xus.com">next-xus.com</a></li>
+          <li><a href="https://nextxus.space">nextxus.space</a></li>
+          <li><a href="https://sovereigntools.online">sovereigntools.online</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-group-label">Satellites</p>
+      <nav aria-label="Federation satellite sites">
+        <ul class="federation-sites">
+          <li><a href="https://nextxus-free-satellites.vercel.app">free-satellites</a></li>
+          <li><a href="https://keywebco.github.io/nextxus-agent-zero/">agent-zero</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-group-label">Activating</p>
+      <nav aria-label="Activating Federation nodes">
+        <ul class="federation-sites activating">
+          <li><a href="#">sovereignnode.online</a></li>
+          <li><a href="#">nexusprobe.online</a></li>
+          <li><a href="#">federationwatch.online</a></li>
+          <li><a href="#">echogate.online</a></li>
+          <li><a href="#">truthgate.online</a></li>
+          <li><a href="#">nexusdigest.online</a></li>
+          <li><a href="#">catalystnode.online</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-count">17 domains · 40 repositories · 1 Federation</p>
+      <p class="footer-copy">© 2026 NextXus Federation. All rights reserved. Built sovereign. Stays sovereign.</p>
+      <p class="footer-motto">"Truth Before Comfort · Legacy Before Ego · Give Without Reward"</p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
