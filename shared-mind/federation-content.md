@@ -13,7 +13,7 @@
 | Site | URL | Role |
 |------|-----|------|
 | ⚡ Command Throne | https://nextxus.tech | Operational hub and admin cockpit |
-| ⟩ Cathedral / Core | https://nextxus.online | Source of truth — all content flows here |
+| ⛩ Cathedral / Core | https://nextxus.online | Source of truth — all content flows here |
 | 📚 Library Pillar | https://nextxus.org | Archive, knowledge, legacy content |
 | 💚 Sanctuary — The Lab | https://nextxus.studio | AI Minds lab and experimental space |
 | 🎓 University | https://nextxus.help | Learning and onboarding |
