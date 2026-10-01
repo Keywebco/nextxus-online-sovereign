@@ -16,5 +16,33 @@
     "crypto": "in-system",
     "gofundme": "https://www.gofundme.com/f/fund-the-human-codex-for-global-betterment"
   },
-  "banned_refs": ["nextxus.space", "rogerkey", "gumroad.com/rogerkey"]
+  "banned_refs": [
+    "nextxus.space",
+    "rogerkey",
+    "gumroad.com/rogerkey"
+  ],
+  "retired_nodes": {
+    "note": "Retired/pending nodes. Sync watchers should skip these and not report them as errors. Checked 2026-10-01: DNS resolves but HTTPS returns no response.",
+    "updated": "2026-10-01",
+    "nodes": [
+      {
+        "domain": "nextxus.digital",
+        "former_role": "Roger 4.0 / Bridge",
+        "status": "retired",
+        "active": false
+      },
+      {
+        "domain": "nextxus.one",
+        "former_role": "Oracle",
+        "status": "retired",
+        "active": false
+      },
+      {
+        "domain": "nextxus.store",
+        "former_role": "Store node",
+        "status": "retired",
+        "active": false
+      }
+    ]
+  }
 }
