@@ -1,3 +1,5 @@
+> Note added 2026-11-20. Per Roger 2026-11-20: Federation stack is GitHub + Google Drive + repositories + Immutable HumanCodex. Emergent is not used. Mentions of Emergent as a Federation platform or backend in the original text are legacy wording and were not erased. Sites that still appear to be served from Emergent infrastructure need a move to GitHub Pages.
+
 # nextxus-online-sovereign
 NextXus Core — nextxus.online sovereign pillar (built 2026-08-23, doctrine-first)
 
@@ -13,7 +15,7 @@ These three nodes are down and marked retired/pending (`"status": "retired"`, `"
 
 Checked 2026-10-01: DNS still resolves, HTTPS returns no response.
 
-Where the live watchers still list them (inside the Emergent apps, so they must be changed from the Emergent side, not here):
+Where the live watchers still list them (inside the older apps that still appear to be served from Emergent infrastructure; those apps are not part of the Federation stack as of 2026-11-20 and need a move to GitHub Pages. Until then, this sovereign repo cannot edit them):
 
 - `Private-Library` · `backend/federation_sync.py` (`SIBLINGS`: `oracle`, `roger_4`)
 - `Private-Library` · `backend/services/federation_auto_sync.py` (`roger_4`, `oracle`)
