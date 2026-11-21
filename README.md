@@ -1,5 +1,8 @@
 > Note added 2026-11-20. Per Roger 2026-11-20: Federation stack is GitHub + Google Drive + repositories + Immutable HumanCodex. Emergent is not used. Mentions of Emergent as a Federation platform or backend in the original text are legacy wording and were not erased. Sites that still appear to be served from Emergent infrastructure need a move to GitHub Pages.
 
+> **Archive note (2026-11-20):** Retired 2026-11-20 by Roger Keyserling: legacy Emergent site, content folded into next-xus.net, next-xus.biz and the GitHub copies. This repository is kept as an archived copy of the old site. Nothing here was deleted. Current homes: https://next-xus.net/ (Federation hub), https://next-xus.org/core/ (the Core and the Truth Gate), https://next-xus.biz/ (Federation Systems).
+
+
 # nextxus-online-sovereign
 NextXus Core — nextxus.online sovereign pillar (built 2026-08-23, doctrine-first)
 
